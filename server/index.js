@@ -1,36 +1,31 @@
+// server/index.js
 const express = require('express');
-const app = express();
-const cors = require('cors');
 const path = require('path');
-require('dotenv').config();
 
-// Import routes
-const footprintRoutes = require('./routes/footprint');
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors());
+// Middleware to parse JSON (optional if you need APIs)
 app.use(express.json());
 
-// Serve static files from Vite's build folder (dist)
-app.use(express.static(path.join(__dirname, 'dist')));
+// Serve static files from client build folder
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
-// Basic API routes
-app.get('/api', (req, res) => {
-  res.send('GhostGuardian backend is running.');
-});
+// Health check route for Render
+app.get('/healthz', (req, res) => res.sendStatus(200));
 
-app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello from GhostGuardian backend 👻' });
-});
+// Your API routes go above this line
+// Example:
+// app.get('/api/hello', (req, res) => {
+//   res.json({ message: 'Hello from server!' });
+// });
 
-// Footprint scanning routes
-app.use('/api/footprint', footprintRoutes);
-
-// ✅ Wildcard route for SPA (catch-all) — fixed syntax for Express
+// Wildcard route to handle SPA routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 
 // Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
