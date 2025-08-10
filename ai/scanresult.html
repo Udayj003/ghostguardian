@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GhostGuardian Scan Results</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #58a6ff;
+      margin-bottom: 1.5rem;
+    }
+
+    .result {
+      background-color: #161b22;
+      border-left: 5px solid #3fb950;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+    }
+
+    .result.danger {
+      border-left-color: #ffa657;
+    }
+
+    .source {
+      font-size: 0.95rem;
+      color: #8b949e;
+    }
+
+    .status {
+      margin-top: 0.4rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🕵 Scan Results</h1>
+
+    <div class="result danger">
+      <p><strong>Email Found in Breach:</strong> uday@example.com</p>
+      <p class="source">Source: HaveIBeenPwned API</p>
+      <p class="status">Status: ⚠ Breached</p>
+    </div>
+
+
+    <div class="result danger">
+      <p><strong>GitHub Repo Leaking Email:</strong> Ghost-Login-Project</p>
+      <p class="source">Source: GitHub Search API</p>
+      <p class="status">Status: ⚠ Potential Leak</p>
+    </div>
+
+    <div class="result">
+      <p><strong>Twitter Activity:</strong> No suspicious patterns</p>
+      <p class="source">Source: Twitter API</p>
+      <p class="status">Status: ✅ Safe</p>
+    </div>
+  </div>
+</body>
+</html>

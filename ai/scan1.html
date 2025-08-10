@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scan Results</title>
+  <style>
+    body { font-family: Arial; background: #f0f2f5; padding: 40px; }
+    h2 { color: #444; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ccc; }
+    th { background: #6c63ff; color: white; }
+    .high-risk { color: #e74c3c; }
+    .medium-risk { color: #f39c12; }
+    .low-risk { color: #2ecc71; }
+  </style>
+</head>
+<body>
+  <h2>GhostGuardian - Digital Footprint Findings</h2>
+  <table>
+    <tr><th>Platform</th><th>Exposure Type</th><th>Risk Level</th></tr>
+    <tr><td>Facebook</td><td>Old Public Posts</td><td class="medium-risk">Medium</td></tr>
+    <tr><td>HaveIBeenPwned</td><td>Password Breach</td><td class="high-risk">High</td></tr>
+    <tr><td>LinkedIn</td><td>Email Visibility</td><td class="low-risk">Low</td></tr>
+  </table>
+</body>
+</html>

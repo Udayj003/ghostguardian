@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GhostGuardian Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #f0f6fc;
+      margin: 0;
+      padding: 0;
+    }
+    .dashboard {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1 {
+      color: #58a6ff;
+    }
+    .card {
+      background-color: #161b22;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #58a6ff33;
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+    .alert {
+      color: #ffa657;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Welcome, Uday 👻</h1>
+
+    <div class="card">
+      <h2>Digital Footprint Summary</h2>
+      <p>Breached Accounts: <strong>3</strong></p>
+      <p>Exposed Emails: <strong>uday@example.com</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>Recent Threats</h2>
+      <p class="alert">⚠ Your email was found in a known data breach!</p>
+      <p class="alert">⚠ Weak password detected on social media account.</p>
+    </div>
+
+    <div class="card">
+      <h2>Privacy Suggestions</h2>
+      <ul>
+        <li>Change password on exposed accounts</li>
+        <li>Enable 2FA on all services</li>
+        <li>Remove old social media logins</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

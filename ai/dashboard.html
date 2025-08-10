@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GhostGuardian – Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    .header {
+      background: #1e293b;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .container {
+      padding: 2rem;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+      color: #38bdf8;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">📊 GhostGuardian Dashboard</div>
+  <div class="container">
+    <div class="card">
+      <h3>🧠 AI Threat Score</h3>
+      <p>Threat Level: Moderate<br/>3 sensitive exposures detected this week.</p>
+    </div>
+    <div class="card">
+      <h3>📂 Data Sources Scanned</h3>
+      <p>LinkedIn, GitHub, HaveIBeenPwned, Twitter, Email Leak Databases.</p>
+    </div>
+    <div class="card">
+      <h3>🚨 Recent Alerts</h3>
+      <p>2 leaked credentials found.<br/>1 old profile publicly visible on GitHub.</p>
+    </div>
+    <div class="card">
+      <h3>💡 Privacy Tips</h3>
+      <p>Disable old accounts.<br/>Enable 2FA on major services.<br/>Clean up GitHub bio.</p>
+    </div>
+  </div>
+</body>
+</html>
